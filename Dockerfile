@@ -7,6 +7,7 @@ RUN apt update -y
 RUN apt install -y ca-certificates wget && wget -O "/usr/share/keyrings/xpra.asc" https://xpra.org/xpra.asc && apt update
 RUN apt install xpra -y
 RUN apt install x11-apps -y
+RUN apt install xterm -y
 RUN apt install dbus-x11 -y
 RUN mkdir /usr/share/xpra/www
 COPY ./www /usr/share/xpra/www
@@ -24,4 +25,4 @@ USER user
 WORKDIR /home/user
 
 EXPOSE 9876
-CMD xpra start --bind-tcp=0.0.0.0:9876 --html=on --start-child=xeyes --exit-with-children=no --daemon=no 
+CMD xpra start --bind-tcp=0.0.0.0:9876 --html=on --start-child=xterm --exit-with-children=no --daemon=no 
