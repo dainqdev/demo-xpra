@@ -5,4 +5,4 @@
 **RUN IN BROWSER**<br />
 Connect to http://localhost:9876 in browser to view xeyes window<br />
 **DEMO IN BROWSER**<br />
-![image](https://github.com/dainqdev/demo-xpra/assets/146931211/364fd04f-0d30-44d6-b84a-ca94e08d221e)
+![image](./demo.gif)
